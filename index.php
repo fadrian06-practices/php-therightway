@@ -1,24 +1,29 @@
 <?php
 
-function x()
-{
-  sleep(3);
+$paymentStatus = false;
 
-  echo 'Done <br />';
-
-  return 3;
-}
-
-switch (x()) {
+switch ($paymentStatus) {
   case 1:
-    echo 1;
-    break;
+    echo 'Paid';
+     break;
   case 2:
-    echo 2;
-    break;
   case 3:
-    echo 3;
+    echo 'Payment Declined';
+    break;
+  case 0:
+    echo 'Pending Payment';
     break;
   default:
-    echo 4;
+    echo 'Unknown Payment Status';
 }
+
+echo '<br />';
+
+$paymentStatusDisplay = match ($paymentStatus) {
+  1 > 2 => 'Paid',
+  2, 3 => 'Payment Declined',
+  0 => 'Pending Payment',
+  default => 'Unknown Payment Status'
+};
+
+echo $paymentStatusDisplay;
