@@ -1,7 +1,7 @@
 <?php
 
-/* INTEGERS */
+/* FLOATS */
 
-$x = 2_000_000_000;
+$x = '15.5a';
 
-var_dump($x);
+var_dump((float) $x);
