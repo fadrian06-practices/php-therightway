@@ -1,27 +1,9 @@
 <?php
 
-/* OPERATORS */
+/* Operator Precedence & Associativity */
+$x = true;
+$y = false;
 
-// Arithmetic Operators (+ - * / % **)
+$z = ($x and $y);
 
-// Assignment Operators (= += -= *= /= %= **=)
-
-// String Operators (. .=)
-
-// Comparison Operators (== === != <> !== < > <= >= <=> ?? ?:)
-
-// Error Control Operators (@)
-
-// Increment/Decrement Operators (++, --)
-
-// Logical Operators (&& || ! and or xor)
-
-// Bitwise Operators (& | ^ ~ << >>)
-
-// Array Operators (+ == === != <> !==)
-
-// Execution Operators (``)
-
-// Type Operators (instanceof)
-
-// Nullsafe Operator - PHP8 (?)
+var_dump($z);
