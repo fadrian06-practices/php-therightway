@@ -1,15 +1,24 @@
 <?php
 
-/* LOOPS */
+function x()
+{
+  sleep(3);
 
-// while
+  echo 'Done <br />';
 
-// do-while
+  return 3;
+}
 
-// for
-
-for ($i = 0; $i < 10; ++$i):
-  echo $i, '<br />';
-endfor;
-
-// foreach
+switch (x()) {
+  case 1:
+    echo 1;
+    break;
+  case 2:
+    echo 2;
+    break;
+  case 3:
+    echo 3;
+    break;
+  default:
+    echo 4;
+}
