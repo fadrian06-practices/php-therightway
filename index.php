@@ -1,8 +1,11 @@
 <?php
 
-// ARRAYS
-$array = ['a' => 1, 'b' => null];
+// Expressions
 
-var_dump(array_key_exists('b', $array));
+$x = 5;
 
-var_dump(isset($array['b']));
+$y = $x;
+
+if ($x < 5) {
+  echo 'Hello';
+}
