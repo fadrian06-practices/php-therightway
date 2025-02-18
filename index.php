@@ -4,9 +4,16 @@
 
 declare(strict_types=1);
 
-function foo(): mixed
-{
-  return 1.5;
+function foo(int $x, int $y): int {
+  var_dump($x, $y);
+
+  if ($x % $y === 0) {
+    return $x / $y;
+  }
+
+  return $x;
 }
 
-var_dump(foo());
+$arr = [2, 'x' => 1];
+
+echo foo(...$arr);
