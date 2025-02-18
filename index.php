@@ -1,9 +1,11 @@
 <?php
 
-/* return | declare | goto */
+/* require / require_once / include / include_once */
 
-declare(strict_types=1);
+ob_start();
+include 'partials/nav.php';
+$nav = ob_get_clean();
 
-function sum(int $x, int $y): int {
-  return $x + $y;
-}
+$nav = str_replace('About', 'About Us', $nav);
+
+echo $nav;
