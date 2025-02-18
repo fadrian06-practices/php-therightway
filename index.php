@@ -10,10 +10,6 @@
 
 // Comparison Operators (== === != <> !== < > <= >= <=> ?? ?:)
 
-$y = $x ?? 'hello';
-
-var_dump($y);
-
 // Error Control Operators (@)
 
 // Increment/Decrement Operators (++, --)
