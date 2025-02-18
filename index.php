@@ -1,11 +1,12 @@
 <?php
 
-/* require / require_once / include / include_once */
+/** functions */
 
-ob_start();
-include 'partials/nav.php';
-$nav = ob_get_clean();
+declare(strict_types=1);
 
-$nav = str_replace('About', 'About Us', $nav);
+function foo(): mixed
+{
+  return 1.5;
+}
 
-echo $nav;
+var_dump(foo());
