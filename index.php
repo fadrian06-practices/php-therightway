@@ -1,19 +1,36 @@
 <?php
 
-/** functions */
+/** variable scopes */
 
-declare(strict_types=1);
+// $x = 5;
 
-function foo(int $x, int $y): int {
-  var_dump($x, $y);
+function getValue() {
+  static $value = null;
 
-  if ($x % $y === 0) {
-    return $x / $y;
+  if ($value === null) {
+    $value = someVeryExpensiveFunction();
   }
 
-  return $x;
+  // some more processing with $value
+
+  return $value;
 }
 
-$arr = [2, 'x' => 1];
+function someVeryExpensiveFunction() {
+  sleep(2);
 
-echo foo(...$arr);
+  echo 'Processing';
+
+  return 10;
+}
+
+echo getValue(), '<br />';
+echo getValue(), '<br />';
+echo getValue(), '<br />';
+
+echo $x;
+
+// include 'script1.php';
+
+// echo '<br />';
+// echo $x;
